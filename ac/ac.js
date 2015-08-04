@@ -25,7 +25,7 @@ casper.then(function() {
 });
 
 casper.waitForUrl('https://www.airchina.fr/CAOnline/dyn/air/booking/availability',function() {
-	this.captureSelector(result_path+'/'+moment().format('YYYY-MM-DD') + '.png','div.page-container');
+	this.captureSelector(result_path+'/'+moment().format('YYYY-MM-DD-h-mm') + '.png','div.page-container');
 });
 
 casper.on('error', function(error) {
